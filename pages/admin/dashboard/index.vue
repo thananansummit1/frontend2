@@ -1,13 +1,14 @@
 <template>
-  <div>xxxxxxxxxx</div>
+  <div>xxxxx</div>
 </template>
 
 <script>
 export default {
   layout(context) {
-    return 'landding'
+    return 'default'
   },
 }
 </script>
 
 <style></style>
+>

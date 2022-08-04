@@ -5,5 +5,27 @@
 </template>
 
 <script>
-export default {}
+export default {
+  layout(context) {
+    return 'landding'
+  },
+  mounted() {
+    const token =
+      window.localStorage.getItem('token') || this.$store.getters.token
+    if (token) {
+      this.redirect()
+    } else {
+      this.$router.replace({
+        name: 'login',
+      })
+    }
+  },
+  methods: {
+    redirect() {
+      this.$router.replace({
+        name: 'admin-dashboard',
+      })
+    },
+  },
+}
 </script>
